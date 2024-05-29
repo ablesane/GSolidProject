@@ -20,11 +20,10 @@ import time
 import numpy as np
 
 # input API keys here
-MPDS_api_key = "29r3PRLsIW8YNzxxTCVgDmxP0ylZqfWSUvBVE3IVyrZvpqKG"
-New_MP_api_key = "Jcw46im7UV1xOfHzbZZ8nkq8BH00Pf6s"
-Legacy_MP_api_key = "2d5wyVmhDCpPMAkq"
+MPDS_api_key = "hznJUbncUkM6Wt3KkxNdaQIqcGyh62Nzj4leECvWKhxcNRW6"
+New_MP_api_key ="S0l8OMrjeiqxN9y4nXNgzvVcAtCmbKWF"
 
-data_dir = "70x70_matrix_data"
+data_dir = "data"
 enthalpies_file = data_dir + "\\fusion_enthalpies.json"
 melt_temps_file = data_dir + "\\fusion_temperatures.json"
 
