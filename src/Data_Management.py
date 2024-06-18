@@ -354,7 +354,7 @@ def extract_MPDS_liquidus(MPDS_json, verbose=True):
 
     # convert string pairs into [X, T] float pairs and store as liquidus
     X = [float(i.split(',')[0]) / 100.0 for i in data]
-    T = [float(i.split(',')[1]) + 273.15 for i in data]
+    T = [float(i.split(',')[1]) + 273.15 for i in data] ##Kelvin
     MPDS_liquidus = [[X[i], T[i]] for i in range(len(X))]
 
     # filter out duplicate values in the liquidus curve; greatly improves runtime efficiency
@@ -453,7 +453,7 @@ def get_dft_convexhull(components, verbose=False):
 
         try:
             pd = PhaseDiagram(elements=[Element(c) for c in components],
-                              entries=[ComputedEntry.from_dict(e) for e in dft_entries])
+                              entries=[ComputedEntry.from_dict(e) for e in dft_entries])  ##Refer to phase diagram object doc in MP
             if verbose:
                 print(len(pd.stable_entries) - 2, "stable line compound(s) on the DFT convex hull\n")
             return pd
@@ -468,7 +468,7 @@ def get_dft_convexhull(components, verbose=False):
         with Legacy_MPRester(Legacy_MP_api_key) as MPR:
             entries = MPR.get_entries_in_chemsys(components, inc_structure=True)
 
-    # using new MP energies (GGA/GGA+U, R2SCAN, GGA/GGA+U/R2SCAN)
+    # using new MP energies (****GGA/GGA+U****, R2SCAN, GGA/GGA+U/R2SCAN)
     else:
         with New_MPRester(New_MP_api_key) as MPR:
             # if dft_type == "R2SCAN" or dft_type == "GGA/GGA+U/R2SCAN":
