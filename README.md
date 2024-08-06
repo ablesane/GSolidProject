@@ -25,8 +25,7 @@ The ability of a HEA to form and sustain a protective oxide layer is directly in
     - [Analytical Questions](#analytical-questions)
     - [Methods and Tools](#methods-and-tools)
   - [Results](#results)
-  - [Contributing](#contributing)
-  - [Acknowledgments](#acknowledgments)
+  - [References & Acknowledgments](#references-&-acknowledgments)
 
 ## Getting Started
 
@@ -36,24 +35,31 @@ Ensure that you have the Python package dependencies installed before running th
 
 ### Project Structure
 
-`data/`: Folder contains open source data sets from the Materials Project and Materials Platform for Data Science.
+`data/`: Folder contains open source data sets from The Materials Project and Materials Platform for Data Science.
 
-`notebooks/`: Jupyter notebooks with the exploratory data analysis and models.
+`notebooks/`: Jupyter notebooks with the data processing procedure.
 
 `src/`: utility scripts used in this project.
+
+`workflows/`: Machine Learning & Data Visualization workflows utilized in Orange Data Mining.
 
 ## Data Access
 
 ### Data Sources
 
 #### Materials Platform for Data Science 
-The Materials Platform for Data Science (MPDS) is a digitalized version of the PAULING FILE materials database. The databases contains experimental observations of crystal structure, phase diagrams, and physical properties obtained from original scientific publications from 1891 to present. Data can be accessed via API and is retunred in JSON format. This project will be extracting liquidus curve data from experimental phase diagrams of binary and ternary systems. Phase diagrams are predomiantely sourced from journal publications, with the majority sourced from the Russian Journal of Inorganic Chemistry, Journal of Alloys and Compounds, and CALPHAD. Open source data specifided by the API license is released under the Creative Commons Attribution 4.0 International license. Commercial proprietary data is closed, confidential and not available for distribution.
+[The Materials Platform for Data Science](https://mpds.io/#start) (MPDS) is a digitalized version of the PAULING FILE materials database. The databases contains experimental observations of crystal structure, phase diagrams, and physical properties obtained from original scientific publications from 1891 to present. Data can be accessed via API and is returned in JSON format. This project will be extracting liquidus curve data from experimental phase diagrams of binary and ternary systems. Phase diagrams are predomiantely sourced from journal publications, with the majority sourced from the Russian Journal of Inorganic Chemistry, Journal of Alloys and Compounds, and CALPHAD. Open source data specified by the API license is released under the Creative Commons Attribution 4.0 International license. Commercial proprietary data is closed, confidential and not available for distribution.
 
 
 #### The Materials Project
-The Materials Project is a multi-institution, multi-national effort to compute the properties of all inorganic materials and provide the data and associated analysis algorithms for every materials researcher free of charge. The Materials project is powered by the Python Materials Genomics package (pymatgen), an open source python library for materials analysis. Pymatgen has analytical tools for phase diagram generation, reaction balancing & calculation, diffusion analyses, and more. Pymatgen is integated with the Materials Project API to easily access materials data. Users of Material project agree to accept the Creative Commons Attribution 4.0 License.
+[The Materials Project](https://next-gen.materialsproject.org/) is a multi-institution, multi-national effort to compute the properties of all inorganic materials and provide the data and associated analysis algorithms for every materials researcher free of charge. The Materials Project is powered by the Python Materials Genomics package (pymatgen), an open source python library for materials analysis. Pymatgen has analytical tools for phase diagram generation, reaction balancing & calculation, diffusion analyses, and more. Pymatgen is integated with the Materials Project API to easily access materials data. Users of The Materials Project agree to accept the Creative Commons Attribution 4.0 License.
 
 ### Data Preparation
+The data sourced from MPDS and The Materials Project will be processed to calculate the regular solution mixing enthalpy of oxygen in various metal oxide systems.
+#### Hume-Rothery Rules
+The Hume-Rothery rules are a helpful tool for predicting the formation of a solid solution. These rules specify that for a solid solution to form, the two elements involved must have similar atomic sizes, crystal structures, electronegativities, and valencies.
+
+For a given material, atomic size, electronegativity,crystal structure, and valence are strongly related to one another. This project will only study the electronegativity of the metal oxide systems explored to supplement the regular solution mixing enthalpy calculations. 
 
 ## Analysis
 
@@ -70,6 +76,16 @@ Density functional theory (DFT) is a method employed to predict the properties o
 
 Given the known limitations of CALPHAD and DFT-based calculations, the strategy is to develop a computational method that combines experimental phase boundaries and thermodynamic calculations from MPDS with density functional theory (DFT)-based solid-state energy calculations from Materials Project. It is through this approach that the oxidation resistance of novel structural alloys can be characterized.
 
-## Acknowledgments
+#### Orange Data Mining
+[Orange Data Mining](https://orangedatamining.com/) is an open source software tool used for creating machine learning pipelines and interactive data visualizations.  This project will use Orange to creat machine learning pipeline to assess and predict the calculated regular mixing enthalpy of various metal systems.
 
+## References & Acknowledgement
 
+1. Approach based on work conducted by S. Tan, J. Willwerth, A. Rauf & W. Sun, “Rapid estimation of the liquidus curve for unexplored alloy chemistries” [unpublished work] (2024)
+2.	Poresh Kumar, Tu-Ngoc Lam, Pawan Kumar Tripathi, Sudhanshu Shekhar Singh, Peter K. Liaw, E-Wen Huang; Recent progress in oxidation behavior of high-entropy alloys: A review. APL Mater (December 2022)
+3.	Domingo Jullian, Jianqiang Zhang, D. Brynn Hibbert, David J. Young, Oxygen solubility in austenitic Fe-Ni alloys at high temperatures, Journal of Alloys and Compounds, Volume 732, (2018)
+4.	Ohtani, H. The CALPHAD Method. In: Czichos, H., Saito, T., Smith, L. (eds) Springer Handbook of Materials Measurement Methods. Springer Handbooks. Springer, Berlin, Heidelberg. (2006)
+
+I would like to thank Dr. Wenhao Sun, Joshua Willwerth, and Shibo Tan and the rest of the Sun Research Group at the University of Michigan - Ann Arbor for their valuable guidance and support.
+
+Project collaboration was made possible through the Michigan Insitiute For Data & AI In Society (MIDAS) Faculty Student Reasearch Connections Program.

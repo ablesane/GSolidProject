@@ -1,0 +1,77 @@
+{
+ "temp": [
+  0,
+  1600.0
+ ],
+ "arity": 2,
+ "entry": "C103523",
+ "naxes": 2,
+ "labels": [
+  [
+   "L",
+   [
+    0.6765154403354937,
+    1508.7683730359859
+   ],
+   null
+  ],
+  [
+   "(Ni)",
+   [
+    0.11656881433480633,
+    731.2275722249792
+   ],
+   186
+  ],
+  [
+   "(Ni) + NiO ht",
+   [
+    1.2296035074342355,
+    636.5940192600101
+   ],
+   7212
+  ]
+ ],
+ "shapes": [
+  {
+   "kind": "phase",
+   "label": "L",
+   "nphases": 1,
+   "svgpath": "M 0.0833969,0 L 0,0 L 0,1600 L 3.12838,1600 L 3.12838,1565.13 L 0.809283,1437 L 0,1452 L 0.286218,1437 L 0.0833969,0",
+   "is_solid": false
+  },
+  {
+   "kind": "phase",
+   "nphases": 2,
+   "svgpath": "M 0.0907627,0 L 3.5,0 L 3.5,1600 L 3.13572,1600 L 3.13572,1561.06 L 0.873524,1436.07 L 0.873507,1436.07 L 0.809504,1432.53 L 0.632344,1435.82 L 0.632349,1436.04 L 0.620642,1436.03 L 0.263857,1442.65 L 0.294157,1441.06 L 0.293727,1438.02 L 0.293727,1438.02 L 0.0907627,0",
+   "is_solid": true
+  }
+ ],
+ "diatype": "binary",
+ "title_a": "Ni",
+ "title_b": "O",
+ "comp_end": {
+  "O": 1,
+  "Ni": 0
+ },
+ "comp_range": [
+  0.0,
+  3.5
+ ],
+ "comp_start": {
+  "O": 0,
+  "Ni": 1
+ },
+ "chemical_elements": [
+  "Ni",
+  "O"
+ ],
+ "object_repr": "C-A270946",
+ "$schema": "https://developer.mpds.io/mpds.schema.json#/definitions/phase_diagram",
+ "version": "1.2.0",
+ "object_type": "C",
+ "use_visavis_type": "pd",
+ "reference": {
+  "entry": "https://mpds.io/entry/C103523"
+ }
+}
