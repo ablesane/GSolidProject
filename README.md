@@ -70,7 +70,7 @@ For a given material, atomic size, electronegativity,crystal structure, and vale
 
 ### Methods and Tools
 
-The CALPHAD (Calculation of Phase Diagrams) method is the standard technique for modeling thermodynamic processes. The method transforms the available experimental data of material systems into physical-based mathematical models.3 Because it uses verified experimental data, the method can extrapolate material properties within the known domain with great accuracy but cannot scale to predict new alloy systems for which experimental data cannot be obtained.
+The CALPHAD (Calculation of Phase Diagrams) method is the standard technique for modeling thermodynamic processes. The method transforms the available experimental data of material systems into physical-based mathematical models. Because it uses verified experimental data, the method can extrapolate material properties within the known domain with great accuracy but cannot scale to predict new alloy systems for which experimental data cannot be obtained.
 
 Density functional theory (DFT) is a method employed to predict the properties of novel alloy systems. DFT calculations predict material behavior based on the behavior of materials at and below the atomic scale. It's worth noting that DFT-based calculations have lower thermodynamic accuracy compared to properties calculated by the CALPHAD method. 
 
