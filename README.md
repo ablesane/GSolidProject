@@ -88,4 +88,4 @@ Given the known limitations of CALPHAD and DFT-based calculations, the strategy 
 
 I would like to thank Dr. Wenhao Sun, Joshua Willwerth, and Shibo Tan and the rest of the Sun Research Group at the University of Michigan - Ann Arbor for their valuable guidance and support.
 
-Project collaboration was made possible through the Michigan Institiute For Data & AI in Society (MIDAS) Faculty Student Research Connections Program.
+Project collaboration was made possible through the Michigan Institute For Data & AI in Society (MIDAS) Faculty Student Research Connections Program.
